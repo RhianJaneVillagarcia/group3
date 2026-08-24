@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="An interactive timeline exploring the life, scientific discoveries, and legacy of Louis Pasteur."
+    >
+
+    <title>Group 3 PETA 4 - Louis Pasteur — A Journey Through Science</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         BACKGROUND SCIENCE EFFECTS
+    ========================== -->
+    <div class="science-background" aria-hidden="true">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+
+        <div class="molecule molecule-1">
+            <span></span><span></span><span></span>
+        </div>
+
+        <div class="molecule molecule-2">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <header class="navbar" id="navbar">
+        <a href="#hero" class="brand" aria-label="Louis Pasteur home">
+            <span class="brand-mark">G3</span>
+            <span class="brand-text">PETA 4</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#hero">PASTEUR</a>
+            <a href="#timeline">TIMELINE</a>
+            <a href="#discoveries">DISCOVERIES</a>
+            <a href="#legacy">LEGACY</a>
+        </nav>
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#hero">PASTEUR</a>
+            <a href="#timeline">TIMELINE</a>
+            <a href="#discoveries">DISCOVERIES</a>
+            <a href="#legacy">LEGACY</a>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+        <section class="hero section" id="hero">
+
+            <div class="hero-content reveal">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    SCIENTIFIC HISTORY · 1822—1895
+                </div>
+
+                <h1>
+                    LOUIS
+                    <span>PASTEUR</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    A Journey Through Science, Discovery, and Vaccination
+                </p>
+
+                <p class="hero-description">
+                    Louis Pasteur was a French chemist and microbiologist whose
+                    research transformed modern science and medicine. From
+                    fermentation and microorganisms to vaccination and
+                    infectious disease, his discoveries changed how humanity
+                    understood disease and prevention.
+                </p>
+
+                <a href="#timeline" class="hero-button">
+                    <span>EXPLORE THE TIMELINE</span>
+                    <span class="arrow">↓</span>
+                </a>
+
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+
+                <div class="orbit orbit-one">
+                    <div class="orbit-dot"></div>
+                </div>
+
+                <div class="orbit orbit-two">
+                    <div class="orbit-dot"></div>
+                </div>
+
+                <div class="scientist-symbol">
+                    <div class="symbol-ring"></div>
+                    <div class="symbol-core">Group 3</div>
+                </div>
+
+                <div class="floating-number number-one">1822</div>
+                <div class="floating-number number-two">1895</div>
+
+            </div>
+
+            <div class="hero-scroll">
+                <span>SCROLL TO DISCOVER</span>
+                <div class="scroll-line"></div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TIMELINE
+        ========================== -->
+        <section class="timeline-section section" id="timeline">
+
+            <div class="section-heading reveal">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    THE SCIENTIFIC JOURNEY
+                </div>
+
+                <h2>
+                    Fourteen Moments<br>
+                    <em>That Changed Science</em>
+                </h2>
+
+                <p>
+                    Explore the major milestones that shaped Pasteur's
+                    scientific career and lasting influence.
+                </p>
+
+            </div>
+
+
+            <!-- Progress -->
+            <div class="timeline-progress">
+
+                <div class="progress-label">
+                    <span>PASTEUR'S SCIENTIFIC JOURNEY</span>
+                    <strong id="progressYear">1822</strong>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <div class="progress-years">
+                    <span>1822</span>
+                    <span>1895</span>
+                </div>
+
+            </div>
+
+
+            <!-- Timeline -->
+            <div class="timeline-wrapper">
+
+                <div
+                    class="timeline"
+                    id="timelineContainer"
+                    role="tablist"
+                    aria-label="Louis Pasteur timeline events"
+                >
+                    <div class="timeline-line">
+                        <div class="timeline-line-progress" id="timelineLineProgress"></div>
+                    </div>
+
+                    <!-- JavaScript generates the 14 events here -->
+                </div>
+
+            </div>
+
+
+            <!-- Event Information -->
+            <article
+                class="event-card"
+                id="eventCard"
+                aria-live="polite"
+            >
+
+                <div class="event-card-number">
+                    <span id="eventNumber">01</span>
+                </div>
+
+                <div class="event-card-content">
+
+                    <div class="event-meta">
+                        <span class="event-year" id="eventYear">1822</span>
+                        <span class="event-separator"></span>
+                        <span class="event-label">MILESTONE</span>
+                    </div>
+
+                    <h3 id="eventTitle">
+                        Birth of Louis Pasteur
+                    </h3>
+
+                    <div class="event-columns">
+
+                        <div class="event-block">
+                            <span class="block-label">WHAT HAPPENED?</span>
+                            <p id="eventDescription"></p>
+                        </div>
+
+                        <div class="event-block">
+                            <span class="block-label">SCIENTIFIC SIGNIFICANCE</span>
+                            <p id="eventSignificance"></p>
+                        </div>
+
+                        <div class="event-block">
+                            <span class="block-label">LEGACY</span>
+                            <p id="eventLegacy"></p>
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="source-button"
+                        id="sourceButton"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span>SOURCE</span>
+                        <span class="source-arrow">↗</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             DISCOVERIES
+        ========================== -->
+        <section class="discoveries-section section" id="discoveries">
+
+            <div class="section-heading centered reveal">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    SCIENTIFIC CONTRIBUTIONS
+                </div>
+
+                <h2>
+                    His Greatest
+                    <em>Contributions</em>
+                </h2>
+
+                <p>
+                    Pasteur's research connected chemistry, biology, medicine,
+                    agriculture, and industry in ways that continue to shape
+                    modern life.
+                </p>
+
+            </div>
+
+
+            <div class="discovery-grid">
+
+                <article class="discovery-card reveal">
+                    <div class="card-icon">01</div>
+                    <div class="card-content">
+                        <span class="card-category">FOOD SAFETY</span>
+                        <h3>Pasteurization</h3>
+                        <p>
+                            His research showed that controlled heating could
+                            destroy harmful microorganisms and help make food
+                            and beverages safer.
+                        </p>
+                    </div>
+                    <span class="card-arrow">↗</span>
+                </article>
+
+
+                <article class="discovery-card reveal">
+                    <div class="card-icon">02</div>
+                    <div class="card-content">
+                        <span class="card-category">MICROBIOLOGY</span>
+                        <h3>Germ Theory</h3>
+                        <p>
+                            His experiments helped establish the importance of
+                            microorganisms and challenged ideas about where
+                            microorganisms came from.
+                        </p>
+                    </div>
+                    <span class="card-arrow">↗</span>
+                </article>
+
+
+                <article class="discovery-card reveal">
+                    <div class="card-icon">03</div>
+                    <div class="card-content">
+                        <span class="card-category">MEDICINE</span>
+                        <h3>Vaccination</h3>
+                        <p>
+                            Pasteur developed important vaccines, including
+                            those against anthrax and rabies.
+                        </p>
+                    </div>
+                    <span class="card-arrow">↗</span>
+                </article>
+
+
+                <article class="discovery-card reveal">
+                    <div class="card-icon">04</div>
+                    <div class="card-content">
+                        <span class="card-category">BIOLOGY</span>
+                        <h3>Fermentation</h3>
+                        <p>
+                            His research demonstrated the important role of
+                            living microorganisms in fermentation.
+                        </p>
+                    </div>
+                    <span class="card-arrow">↗</span>
+                </article>
+
+
+                <article class="discovery-card reveal">
+                    <div class="card-icon">05</div>
+                    <div class="card-content">
+                        <span class="card-category">CHEMISTRY</span>
+                        <h3>Molecular Asymmetry</h3>
+                        <p>
+                            His studies of crystals, molecular structure, and
+                            polarized light contributed to the development of
+                            stereochemistry.
+                        </p>
+                    </div>
+                    <span class="card-arrow">↗</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LEGACY
+        ========================== -->
+        <section class="legacy-section section" id="legacy">
+
+            <div class="legacy-inner">
+
+                <div class="legacy-content reveal">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-line"></span>
+                        1822 — 1895
+                    </div>
+
+                    <h2>
+                        THE LEGACY OF
+                        <em>LOUIS PASTEUR</em>
+                    </h2>
+
+                    <p>
+                        Pasteur's work continues to influence microbiology,
+                        vaccination, infectious disease research, food safety,
+                        medicine, and scientific research.
+                    </p>
+
+                    <div class="legacy-fields">
+
+                        <span>MICROBIOLOGY</span>
+                        <span>VACCINATION</span>
+                        <span>INFECTIOUS DISEASE</span>
+                        <span>FOOD SAFETY</span>
+                        <span>MEDICINE</span>
+                        <span>RESEARCH</span>
+
+                    </div>
+
+                </div>
+
+
+                <blockquote class="legacy-quote reveal">
+                    <span class="quote-mark">“</span>
+
+                    <p>
+                        His discoveries changed the way humanity understood
+                        microorganisms, disease, and prevention.
+                    </p>
+
+                    <footer>
+                        — THE LEGACY OF LOUIS PASTEUR
+                    </footer>
+                </blockquote>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="footer-brand">
+            <span class="brand-mark">LP</span>
+            <span>LOUIS PASTEUR</span>
+        </div>
+
+        <p>
+            Group 3 PETA 4
+        </p>
+
+        <span class="footer-date">1822 — 1895</span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
